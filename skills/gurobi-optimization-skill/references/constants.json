@@ -1,0 +1,54 @@
+{
+  "vtype": {
+    "CONTINUOUS": "连续变量",
+    "BINARY": "二元变量 {0,1}",
+    "INTEGER": "整数变量",
+    "SEMICONT": "半连续变量 (0 或 [lb,ub])",
+    "SEMIINT": "半整数变量 (0 或 {lb,...,ub})"
+  },
+  "status": {
+    "LOADED": "模型已加载",
+    "OPTIMAL": "最优解",
+    "INFEASIBLE": "不可行",
+    "INF_OR_UNBD": "不可行或无界",
+    "UNBOUNDED": "无界",
+    "CUTOFF": "目标超过 Cutoff",
+    "ITERATION_LIMIT": "达到迭代限制",
+    "NODE_LIMIT": "达到节点限制",
+    "TIME_LIMIT": "达到时间限制",
+    "SOLUTION_LIMIT": "达到解数量限制",
+    "INTERRUPTED": "用户中断",
+    "NUMERIC": "数值困难",
+    "SUBOPTIMAL": "次优解",
+    "INPROGRESS": "求解进行中",
+    "USER_OBJ_LIMIT": "达到用户目标限制",
+    "WORK_LIMIT": "达到工作限制",
+    "MEM_LIMIT": "达到内存限制"
+  },
+  "ModelSense": {
+    "MINIMIZE": "最小化 (1)",
+    "MAXIMIZE": "最大化 (-1)"
+  },
+  "Sense": {
+    "LESS_EQUAL": "<=",
+    "EQUAL": "==",
+    "GREATER_EQUAL": ">="
+  },
+  "GenConstrType": {
+    "GENCONSTR_ABS": "绝对值",
+    "GENCONSTR_AND": "逻辑与",
+    "GENCONSTR_OR": "逻辑或",
+    "GENCONSTR_MIN": "取最小",
+    "GENCONSTR_MAX": "取最大",
+    "GENCONSTR_indicator": "指示约束",
+    "GENCONSTR_PWL": "分段线性",
+    "GENCONSTR_POLY": "多项式",
+    "GENCONSTR_EXP": "指数",
+    "GENCONSTR_LOG": "对数",
+    "GENCONSTR_LOGISTIC": "逻辑斯谛",
+    "GENCONSTR_POWER": "幂",
+    "GENCONSTR_SIN": "正弦",
+    "GENCONSTR_COS": "余弦",
+    "GENCONSTR_TAN": "正切"
+  }
+}
