@@ -1,0 +1,26 @@
+{
+  "updated_at": "2026-05-14T11:42:31.872025",
+  "gurobi_doc_version": "current",
+  "data_files": {
+    "classes.json": {
+      "size": 3416,
+      "modified": "2026-05-14T11:39:22.191461"
+    },
+    "code_patterns.json": {
+      "size": 6389,
+      "modified": "2026-05-14T11:39:25.736343"
+    },
+    "constants.json": {
+      "size": 1587,
+      "modified": "2026-05-14T11:39:23.072006"
+    },
+    "error_codes.json": {
+      "size": 1102,
+      "modified": "2026-05-14T11:39:24.845093"
+    },
+    "parameters.json": {
+      "size": 57387,
+      "modified": "2026-05-14T11:42:31.871505"
+    }
+  }
+}

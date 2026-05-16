@@ -1,0 +1,1637 @@
+{
+  "OutputFlag": {
+    "type": "int",
+    "default": "1",
+    "desc": "是否输出求解日志 (0/1)"
+  },
+  "LogToConsole": {
+    "type": "int",
+    "default": "1",
+    "desc": "是否输出到控制台"
+  },
+  "LogFile": {
+    "type": "string",
+    "default": "",
+    "desc": "日志文件路径"
+  },
+  "TimeLimit": {
+    "type": "double",
+    "default": "infinity",
+    "desc": "求解时间限制(秒)"
+  },
+  "MIPGap": {
+    "type": "double",
+    "default": "1e-4",
+    "desc": "MIP 相对 Gap 容差"
+  },
+  "MIPGapAbs": {
+    "type": "double",
+    "default": "1e-10",
+    "desc": "MIP 绝对 Gap 容差"
+  },
+  "MIPFocus": {
+    "type": "int",
+    "default": "0",
+    "desc": "MIP 搜索侧重 (0=平衡,1=可行解,2=最优,3=界)"
+  },
+  "Presolve": {
+    "type": "int",
+    "default": "-1",
+    "desc": "预求解 (-1=自动,0=关闭,1=保守,2=激进)"
+  },
+  "Method": {
+    "type": "int",
+    "default": "-1",
+    "desc": "LP 方法 (-1=自动,0=原始,1=对偶,2=障碍,3=确定性并发)"
+  },
+  "Threads": {
+    "type": "int",
+    "default": "0",
+    "desc": "线程数 (0=自动)"
+  },
+  "Seed": {
+    "type": "int",
+    "default": "0",
+    "desc": "随机种子"
+  },
+  "Cutoff": {
+    "type": "double",
+    "default": "infinity",
+    "desc": "目标值截断阈值"
+  },
+  "NodeLimit": {
+    "type": "double",
+    "default": "infinity",
+    "desc": "节点数限制"
+  },
+  "IterationLimit": {
+    "type": "double",
+    "default": "infinity",
+    "desc": "迭代数限制"
+  },
+  "SolutionLimit": {
+    "type": "int",
+    "default": "infinity",
+    "desc": "解数量限制"
+  },
+  "Heuristics": {
+    "type": "double",
+    "default": "0.05",
+    "desc": "启发式时间比例"
+  },
+  "Cuts": {
+    "type": "int",
+    "default": "-1",
+    "desc": "切割平面 (-1=自动,0=关闭,1=保守,2=激进,3=非常激进)"
+  },
+  "LazyConstraints": {
+    "type": "int",
+    "default": "0",
+    "desc": "是否启用惰性约束 (0/1)"
+  },
+  "InfUnbdInfo": {
+    "type": "int",
+    "default": "0",
+    "desc": "是否获取不可行/无界信息"
+  },
+  "DualReductions": {
+    "type": "int",
+    "default": "1",
+    "desc": "是否使用对偶归约"
+  },
+  "NumericFocus": {
+    "type": "int",
+    "default": "0",
+    "desc": "数值关注程度 (0-3)"
+  },
+  "ScaleFlag": {
+    "type": "int",
+    "default": "-1",
+    "desc": "缩放标志"
+  },
+  "NonConvex": {
+    "type": "int",
+    "default": "-1",
+    "desc": "非凸处理 (-1=自动,0=报错,1=分段线性,2=二阶锥)"
+  },
+  "FuncPieces": {
+    "type": "int",
+    "default": "-1",
+    "desc": "分段线性逼近段数"
+  },
+  "FuncPieceLength": {
+    "type": "double",
+    "default": "0.01",
+    "desc": "分段线性每段长度"
+  },
+  "FuncPieceError": {
+    "type": "double",
+    "default": "0.01",
+    "desc": "分段线性误差容差"
+  },
+  "PoolSearchMode": {
+    "type": "int",
+    "default": "0",
+    "desc": "解池搜索模式 (0=关闭,1=启发式,2=最优)"
+  },
+  "PoolSolutions": {
+    "type": "int",
+    "default": "10",
+    "desc": "解池最大解数"
+  },
+  "BarConvTol": {
+    "type": "double",
+    "default": "1e-8",
+    "desc": "Barrier 收敛容差"
+  },
+  "BarOrder": {
+    "type": "int",
+    "default": "-1",
+    "desc": "Barrier 排序 (-1=自动,0=近似最小度,1=近似最小填充)"
+  },
+  "Crossover": {
+    "type": "int",
+    "default": "-1",
+    "desc": "交叉 (0=关闭,1=自动,2=强制,3=压入)"
+  },
+  "ImproveStartTime": {
+    "type": "double",
+    "default": "infinity",
+    "desc": "改进解开始时间"
+  },
+  "ImproveStartGap": {
+    "type": "double",
+    "default": "infinity",
+    "desc": "改进解开始 Gap"
+  },
+  "AggFill": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866274"
+  },
+  "Aggregate": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866292"
+  },
+  "Attributes": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866296"
+  },
+  "BQPCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866300"
+  },
+  "BarCorrectors": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866314"
+  },
+  "BarHomogeneous": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866318"
+  },
+  "BarIterLimit": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866322"
+  },
+  "BarQCPConvTol": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866325"
+  },
+  "Batch": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866328"
+  },
+  "BestBdStop": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866331"
+  },
+  "BestObjStop": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866336"
+  },
+  "BranchDir": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866339"
+  },
+  "CSAPIAccessID": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866342"
+  },
+  "CSAPISecret": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866345"
+  },
+  "CSAppName": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866348"
+  },
+  "CSAuthToken": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866351"
+  },
+  "CSBatchMode": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866355"
+  },
+  "CSClientLog": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866358"
+  },
+  "CSGroup": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866361"
+  },
+  "CSIdleTimeout": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866368"
+  },
+  "CSManager": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866372"
+  },
+  "CSPriority": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866375"
+  },
+  "CSQueueTimeout": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866379"
+  },
+  "CSRouter": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866382"
+  },
+  "CSTLSInsecure": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866385"
+  },
+  "Callbacks": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866394"
+  },
+  "CliqueCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866397"
+  },
+  "CloudAccessID": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866400"
+  },
+  "CloudHost": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866403"
+  },
+  "CloudPool": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866406"
+  },
+  "CloudSecretKey": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866409"
+  },
+  "Column": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866419"
+  },
+  "ComputeServer": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866422"
+  },
+  "ConcurrentJobs": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866425"
+  },
+  "ConcurrentMIP": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866428"
+  },
+  "ConcurrentMethod": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866431"
+  },
+  "ConcurrentSettings": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866434"
+  },
+  "Constraints": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866438"
+  },
+  "CoverCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866441"
+  },
+  "CrossoverBasis": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866444"
+  },
+  "CutAggPasses": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866447"
+  },
+  "CutPasses": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866450"
+  },
+  "DegenMoves": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866452"
+  },
+  "Disconnected": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866455"
+  },
+  "DisplayInterval": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866458"
+  },
+  "DistributedMIPJobs": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866461"
+  },
+  "DualImpliedCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866464"
+  },
+  "Enums": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866467"
+  },
+  "Environments": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866470"
+  },
+  "FeasRelaxBigM": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866473"
+  },
+  "FeasibilityTol": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866476"
+  },
+  "FixVarsInIndicators": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866479"
+  },
+  "FlowCoverCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866482"
+  },
+  "FlowPathCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866495"
+  },
+  "FuncMaxVal": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866499"
+  },
+  "FuncNonlinear": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866504"
+  },
+  "FuncPieceRatio": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866507"
+  },
+  "GUBCoverCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866513"
+  },
+  "GenConstr": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866516"
+  },
+  "GenExpr": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866519"
+  },
+  "GomoryPasses": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866522"
+  },
+  "GurobiError": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866525"
+  },
+  "Header": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866528"
+  },
+  "IISMethod": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866531"
+  },
+  "IgnoreNames": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866534"
+  },
+  "ImpliedCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866537"
+  },
+  "ImproveStartNodes": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866540"
+  },
+  "ImproveStartWork": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866543"
+  },
+  "InfProofCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866546"
+  },
+  "InheritParams": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866548"
+  },
+  "InputFile": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866551"
+  },
+  "IntFeasTol": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866554"
+  },
+  "IntegralityFocus": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866557"
+  },
+  "JSONSolDetail": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866560"
+  },
+  "JobID": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866563"
+  },
+  "LPWarmStart": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866566"
+  },
+  "LicenseID": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866569"
+  },
+  "LiftProjectCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866572"
+  },
+  "LinExpr": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866575"
+  },
+  "Logging": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866596"
+  },
+  "MConstr": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866600"
+  },
+  "MGenConstr": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866603"
+  },
+  "MIPSepCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866606"
+  },
+  "MIQCPMethod": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866608"
+  },
+  "MIRCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866611"
+  },
+  "MLinExpr": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866614"
+  },
+  "MNLExpr": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866617"
+  },
+  "MQConstr": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866624"
+  },
+  "MQuadExpr": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866632"
+  },
+  "MVar": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866634"
+  },
+  "MarkowitzTol": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866637"
+  },
+  "MasterKnapsackCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866647"
+  },
+  "MemLimit": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866650"
+  },
+  "MinRelNodes": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866653"
+  },
+  "MixingCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866656"
+  },
+  "ModKCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866659"
+  },
+  "MultiObjMethod": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866662"
+  },
+  "MultiObjPre": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866665"
+  },
+  "MultiObjSettings": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866668"
+  },
+  "NLBarCFeasTol": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866670"
+  },
+  "NLBarDFeasTol": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866673"
+  },
+  "NLBarIterLimit": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866676"
+  },
+  "NLBarPFeasTol": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866679"
+  },
+  "NLExpr": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866682"
+  },
+  "NLPHeur": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866685"
+  },
+  "NetworkAlg": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866688"
+  },
+  "NetworkCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866691"
+  },
+  "NoRelHeurSolutions": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866693"
+  },
+  "NoRelHeurTime": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866696"
+  },
+  "NoRelHeurWork": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866699"
+  },
+  "NodeMethod": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866702"
+  },
+  "NodefileDir": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866708"
+  },
+  "NodefileStart": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866711"
+  },
+  "NormAdjust": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866714"
+  },
+  "OBBT": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866716"
+  },
+  "ObjNumber": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866719"
+  },
+  "ObjPassNumber": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866722"
+  },
+  "ObjScale": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866725"
+  },
+  "Objectives": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866735"
+  },
+  "OptimalityTarget": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866738"
+  },
+  "OptimalityTol": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866741"
+  },
+  "Overview": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866743"
+  },
+  "PDHGAbsTol": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866746"
+  },
+  "PDHGConvTol": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866749"
+  },
+  "PDHGGPU": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866752"
+  },
+  "PDHGIterLimit": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866755"
+  },
+  "PDHGRelTol": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866762"
+  },
+  "PSDCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866765"
+  },
+  "PSDTol": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866772"
+  },
+  "Parameters": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866775"
+  },
+  "PartitionPlace": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866778"
+  },
+  "PerturbValue": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866781"
+  },
+  "PoolGap": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866784"
+  },
+  "PoolGapAbs": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866787"
+  },
+  "PreCrush": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866790"
+  },
+  "PreDepRow": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866793"
+  },
+  "PreDual": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866795"
+  },
+  "PreMIQCPForm": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866798"
+  },
+  "PrePasses": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866804"
+  },
+  "PreQLinearize": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866807"
+  },
+  "PreSOS1BigM": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866810"
+  },
+  "PreSOS1Encoding": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866813"
+  },
+  "PreSOS2BigM": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866816"
+  },
+  "PreSOS2Encoding": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866821"
+  },
+  "PreSparsify": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866824"
+  },
+  "ProjImpliedCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866827"
+  },
+  "PumpPasses": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866830"
+  },
+  "QCPDual": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866833"
+  },
+  "QConstr": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866842"
+  },
+  "Quad": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866845"
+  },
+  "QuadExpr": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866848"
+  },
+  "RINS": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866851"
+  },
+  "RLTCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866854"
+  },
+  "Record": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866857"
+  },
+  "RelaxLiftCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866860"
+  },
+  "ResultFile": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866862"
+  },
+  "SOS": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866865"
+  },
+  "ScenarioNumber": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866868"
+  },
+  "ServerPassword": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866871"
+  },
+  "ServerTimeout": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866874"
+  },
+  "SiftMethod": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866877"
+  },
+  "Sifting": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866880"
+  },
+  "SimplexPricing": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866883"
+  },
+  "SoftMemLimit": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866886"
+  },
+  "SolFiles": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866888"
+  },
+  "SolutionNumber": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866891"
+  },
+  "SolutionTarget": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866896"
+  },
+  "StartNodeLimit": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866899"
+  },
+  "StartNumber": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866902"
+  },
+  "StartTimeLimit": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866911"
+  },
+  "StartWorkLimit": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866914"
+  },
+  "StrongCGCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866922"
+  },
+  "SubMIPCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866925"
+  },
+  "SubMIPNodes": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866928"
+  },
+  "Symmetry": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866931"
+  },
+  "TSPort": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866934"
+  },
+  "TempConstr": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866937"
+  },
+  "ThreadLimit": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866940"
+  },
+  "TokenServer": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866942"
+  },
+  "TuneBaseSettings": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866945"
+  },
+  "TuneCleanup": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866948"
+  },
+  "TuneCriterion": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866951"
+  },
+  "TuneDynamicJobs": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866954"
+  },
+  "TuneIgnoreSettings": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866957"
+  },
+  "TuneJobs": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866959"
+  },
+  "TuneMetric": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866962"
+  },
+  "TuneOutput": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866965"
+  },
+  "TuneParams": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866968"
+  },
+  "TuneResults": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866971"
+  },
+  "TuneTargetMIPGap": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866974"
+  },
+  "TuneTargetTime": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866977"
+  },
+  "TuneTimeLimit": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866995"
+  },
+  "TuneTrials": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.866998"
+  },
+  "TuneUseFilename": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867003"
+  },
+  "UpdateMode": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867006"
+  },
+  "Username": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867009"
+  },
+  "VarBranch": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867012"
+  },
+  "Variables": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867015"
+  },
+  "WLSAccessID": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867018"
+  },
+  "WLSConfig": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867021"
+  },
+  "WLSProxy": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867024"
+  },
+  "WLSSecret": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867026"
+  },
+  "WLSToken": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867029"
+  },
+  "WLSTokenDuration": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867032"
+  },
+  "WLSTokenRefresh": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867035"
+  },
+  "WorkLimit": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867038"
+  },
+  "WorkerPassword": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867041"
+  },
+  "WorkerPool": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867044"
+  },
+  "ZeroHalfCuts": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867046"
+  },
+  "ZeroObjNodes": {
+    "type": "unknown",
+    "default": "unknown",
+    "desc": "[待补充] 详见 https://docs.gurobi.com/projects/optimizer/en/current/parameters.html",
+    "_source": "auto_discovered",
+    "_updated": "2026-05-14T11:42:31.867049"
+  }
+}

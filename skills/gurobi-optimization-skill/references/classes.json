@@ -1,0 +1,157 @@
+{
+  "Model": {
+    "desc": "优化模型主类",
+    "url": "https://www.gurobi.com/documentation/current/refman/py_model.html",
+    "key_methods": [
+      "addVar",
+      "addVars",
+      "addMVar",
+      "addConstr",
+      "addConstrs",
+      "addMConstr",
+      "addQConstr",
+      "addGenConstrAbs",
+      "addGenConstrAnd",
+      "addGenConstrOr",
+      "addGenConstrMin",
+      "addGenConstrMax",
+      "addGenConstrIndicator",
+      "addGenConstrNL",
+      "addGenConstrPow",
+      "addGenConstrExp",
+      "addGenConstrLog",
+      "addGenConstrLogistic",
+      "addGenConstrSin",
+      "addGenConstrCos",
+      "addGenConstrTan",
+      "setObjective",
+      "setObjectiveN",
+      "optimize",
+      "computeIIS",
+      "tune",
+      "read",
+      "write",
+      "update",
+      "getVars",
+      "getConstrs",
+      "getQConstrs",
+      "getNumVars",
+      "getNumConstrs",
+      "getNumQConstrs",
+      "getParamInfo",
+      "setParam",
+      "getParam",
+      "reset",
+      "dispose",
+      "copy"
+    ],
+    "key_attributes": [
+      "status",
+      "ObjVal",
+      "ObjBound",
+      "ObjBoundC",
+      "MIPGap",
+      "Runtime",
+      "IterCount",
+      "NodeCount",
+      "SolCount",
+      "ModelName",
+      "ModelSense",
+      "NumVars",
+      "NumConstrs",
+      "IsMIP",
+      "IsQP",
+      "IsQCP",
+      "IsMultiObj"
+    ]
+  },
+  "Var": {
+    "desc": "决策变量",
+    "url": "https://www.gurobi.com/documentation/current/refman/py_var.html",
+    "key_attributes": [
+      "VarName",
+      "X",
+      "Xn",
+      "RC",
+      "LB",
+      "UB",
+      "Obj",
+      "VType",
+      "VarIdNum",
+      "Start"
+    ]
+  },
+  "Constr": {
+    "desc": "线性约束",
+    "url": "https://www.gurobi.com/documentation/current/refman/py_constr.html",
+    "key_attributes": [
+      "ConstrName",
+      "Slack",
+      "Pi",
+      "RHS",
+      "Sense",
+      "Lazy"
+    ]
+  },
+  "MVar": {
+    "desc": "矩阵变量（批量操作）",
+    "url": "https://www.gurobi.com/documentation/current/refman/py_mvar.html",
+    "key_methods": [
+      "sum",
+      "tolist",
+      "flatten",
+      "reshape"
+    ]
+  },
+  "MConstr": {
+    "desc": "矩阵约束（批量操作）",
+    "url": "https://www.gurobi.com/documentation/current/refman/py_mconstr.html",
+    "key_methods": []
+  },
+  "QConstr": {
+    "desc": "二次约束",
+    "url": "https://www.gurobi.com/documentation/current/refman/py_qconstr.html",
+    "key_attributes": [
+      "QCName",
+      "QCRHS",
+      "QCSense",
+      "QCSlack"
+    ]
+  },
+  "GenConstr": {
+    "desc": "通用约束（abs/and/or/min/max/indicator/NL）",
+    "url": "https://www.gurobi.com/documentation/current/refman/py_genconstr.html",
+    "key_attributes": [
+      "GenConstrName",
+      "GenConstrType"
+    ]
+  },
+  "Env": {
+    "desc": "Gurobi 环境（许可证管理）",
+    "url": "https://www.gurobi.com/documentation/current/refman/py_env.html",
+    "key_methods": [
+      "start",
+      "setParam",
+      "getParam",
+      "dispose"
+    ]
+  },
+  "LinExpr": {
+    "desc": "线性表达式",
+    "url": "https://www.gurobi.com/documentation/current/refman/py_linexpr.html",
+    "key_methods": [
+      "addTerms",
+      "getSize",
+      "getCoeff",
+      "getVar"
+    ]
+  },
+  "QuadExpr": {
+    "desc": "二次表达式",
+    "url": "https://www.gurobi.com/documentation/current/refman/py_quadexpr.html",
+    "key_methods": [
+      "addTerms",
+      "addQTerms"
+    ]
+  }
+}

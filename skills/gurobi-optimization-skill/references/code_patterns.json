@@ -1,0 +1,213 @@
+{
+  "addVar": {
+    "desc": "添加单个变量",
+    "examples": [
+      "# 连续变量",
+      "x = model.addVar(lb=0, ub=GRB.INFINITY, vtype=GRB.CONTINUOUS, name=\"x\")",
+      "",
+      "# 二元变量",
+      "y = model.addVar(vtype=GRB.BINARY, name=\"y\")",
+      "",
+      "# 整数变量",
+      "z = model.addVar(lb=0, ub=100, vtype=GRB.INTEGER, name=\"z\")",
+      "",
+      "# 半连续变量",
+      "s = model.addVar(lb=10, ub=100, vtype=GRB.SEMICONT, name=\"s\")"
+    ]
+  },
+  "addVars": {
+    "desc": "批量添加变量",
+    "examples": [
+      "# 一维",
+      "x = model.addVars(10, vtype=GRB.BINARY, name=\"x\")  # x[0]..x[9]",
+      "",
+      "# 多维",
+      "x = model.addVars(I, J, T, vtype=GRB.CONTINUOUS, name=\"x\")  # x[i,j,t]",
+      "",
+      "# 访问",
+      "x[0,1,2]  # 具体变量",
+      "x.sum(0,\"*\",\"*\")  # 对 j,t 求和",
+      "",
+      "# 带范围的批量变量",
+      "x = model.addVars(range(3), range(4), lb=0, ub=10, name=\"x\")"
+    ]
+  },
+  "addMVar": {
+    "desc": "矩阵变量（NumPy 风格）",
+    "examples": [
+      "import numpy as np",
+      "",
+      "# 矩阵变量",
+      "x = model.addMVar(shape=(m,n), vtype=GRB.CONTINUOUS, name=\"x\")",
+      "",
+      "# 矩阵运算",
+      "model.setObjective(c @ x, GRB.MINIMIZE)",
+      "model.addConstr(A @ x <= b, name=\"Ax_leq_b\")"
+    ]
+  },
+  "addConstr": {
+    "desc": "添加线性约束",
+    "examples": [
+      "# 单个约束",
+      "model.addConstr(x + y <= 10, name=\"c1\")",
+      "",
+      "# 带求和的约束",
+      "model.addConstr(gp.quicksum(x[i] for i in I) <= cap, name=\"total\")",
+      "",
+      "# 批量约束",
+      "model.addConstrs((x[i] + y[i] <= cap[i] for i in range(n)), name=\"cap\")",
+      "",
+      "# 矩阵约束",
+      "model.addMConstr(A, x, \"<=\", b, name=\"Ax_leq_b\")",
+      "",
+      "# 逻辑约束",
+      "model.addConstr(x <= M * y, name=\"big_M\")  # 大M法"
+    ]
+  },
+  "addQConstr": {
+    "desc": "添加二次约束",
+    "examples": [
+      "# 二次锥约束: ||x|| <= t",
+      "model.addQConstr(x @ x <= t * t, name=\"soc\")",
+      "",
+      "# 一般二次约束",
+      "model.addQConstr(x @ Q @ x + c @ x <= b, name=\"qc\")"
+    ]
+  },
+  "addGenConstr": {
+    "desc": "添加通用约束",
+    "examples": [
+      "# 绝对值: z = |x|",
+      "model.addGenConstrAbs(z, x, name=\"abs\")",
+      "",
+      "# 逻辑与: z = AND(x,y)",
+      "model.addGenConstrAnd(z, [x, y], name=\"and\")",
+      "",
+      "# 逻辑或: z = OR(x,y)",
+      "model.addGenConstrOr(z, [x, y], name=\"or\")",
+      "",
+      "# 取最小: z = min(x,y)",
+      "model.addGenConstrMin(z, [x, y], name=\"min\")",
+      "",
+      "# 取最大: z = max(x,y)",
+      "model.addGenConstrMax(z, [x, y], name=\"max\")",
+      "",
+      "# 指示约束: y=1 => a*x+b <= 0",
+      "model.addGenConstrIndicator(y, True, a*x+b <= 0, name=\"ind\")"
+    ]
+  },
+  "setObjective": {
+    "desc": "设置目标函数",
+    "examples": [
+      "# 最小化线性目标",
+      "model.setObjective(x + 2*y + 3*z, GRB.MINIMIZE)",
+      "",
+      "# 最大化",
+      "model.setObjective(gp.quicksum(profit[i]*x[i] for i in I), GRB.MAXIMIZE)",
+      "",
+      "# 二次目标",
+      "model.setObjective(x @ Q @ x + c @ x, GRB.MINIMIZE)",
+      "",
+      "# 多目标",
+      "model.setObjectiveN(cost, index=0, priority=2, weight=1.0, name=\"cost\")",
+      "model.setObjectiveN(time, index=1, priority=1, weight=0.5, name=\"time\")"
+    ]
+  },
+  "optimize": {
+    "desc": "求解模型",
+    "examples": [
+      "model.optimize()",
+      "",
+      "# 检查状态",
+      "if model.status == GRB.OPTIMAL:",
+      "    print(f\"最优目标值: {model.ObjVal}\")",
+      "elif model.status == GRB.INFEASIBLE:",
+      "    model.computeIIS()",
+      "    model.write(\"model.ilp\")",
+      "elif model.status == GRB.TIME_LIMIT:",
+      "    if model.SolCount > 0:",
+      "        print(f\"有可行解: {model.ObjVal}\")",
+      "    else:",
+      "        print(\"无可行解\")"
+    ]
+  },
+  "quicksum": {
+    "desc": "高效求和（比 Python sum 快）",
+    "examples": [
+      "# 替代 sum()",
+      "obj = gp.quicksum(cost[i]*x[i] for i in range(n))",
+      "",
+      "# 嵌套求和",
+      "expr = gp.quicksum(",
+      "    gp.quicksum(a[i,j]*x[i,j] for j in J)",
+      "    for i in I",
+      ")"
+    ]
+  },
+  "computeIIS": {
+    "desc": "计算不可行约束子集 (IIS)",
+    "examples": [
+      "# 找出导致不可行的约束",
+      "if model.status == GRB.INFEASIBLE:",
+      "    model.computeIIS()",
+      "    for c in model.getConstrs():",
+      "        if c.IISConstr:",
+      "            print(f\"不可行约束: {c.ConstrName}\")",
+      "",
+      "    # 导出 IIS 到文件",
+      "    model.write(\"model.ilp\")"
+    ]
+  },
+  "callbacks": {
+    "desc": "回调函数（求解过程中干预）",
+    "examples": [
+      "# 添加惰性约束（TSP 示例）",
+      "def my_callback(model, where):",
+      "    if where == GRB.Callback.MIPSOL:",
+      "        vals = model.cbGetSolution(model._vars)",
+      "        # 找到子回路，添加切割",
+      "        if has_subtour(vals):",
+      "            model.cbLazy(add_constraint())",
+      "",
+      "model._vars = x",
+      "model.optimize(my_callback)"
+    ]
+  },
+  "ParamTuning": {
+    "desc": "自动参数调优",
+    "examples": [
+      "# 自动寻找最佳参数组合",
+      "model.tune()",
+      "",
+      "# 获取调优结果",
+      "for i in range(model.TuneResultCount):",
+      "    model.getTuneResult(i)",
+      "    model.write(f\"tuned_{i}.prm\")"
+    ]
+  },
+  "FeasRelax": {
+    "desc": "可行性松弛（处理不可行模型）",
+    "examples": [
+      "# 松弛约束使模型可行",
+      "model.feasRelax(relaxobjtype=0,  # 0=最小化松弛量",
+      "                minrelax=False,",
+      "                vrb=False)",
+      "model.optimize()"
+    ]
+  },
+  "SolutionPool": {
+    "desc": "解池（获取多个解）",
+    "examples": [
+      "# 设置解池参数",
+      "model.setParam(GRB.Param.PoolSearchMode, 2)",
+      "model.setParam(GRB.Param.PoolSolutions, 100)",
+      "",
+      "model.optimize()",
+      "",
+      "# 遍历解池",
+      "for i in range(model.SolCount):",
+      "    model.setParam(GRB.Param.SolutionNumber, i)",
+      "    print(f\"解 {i}: 目标值={model.PoolObjVal}\")"
+    ]
+  }
+}
